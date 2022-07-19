@@ -1,0 +1,47 @@
+.contact {
+    height: 640px;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.contact-header {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+    a {
+        text-decoration: none;
+        color: green;
+    }
+    h1 {
+        font-size: 30px;
+    }
+}
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    span {
+        margin-bottom: 5px;
+    }
+    input {
+        margin-bottom: 20px;
+    }
+}
+
+.send-button {
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid black;
+    margin-top: 30px;
+    &:hover {
+        background-color: rgb(220, 220, 220);
+    }
+}

@@ -1,0 +1,35 @@
+.projects-header {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    h1 {
+        font-size: 30px;
+        text-decoration: underline;
+    }
+}
+
+.projekt-box {
+    display: flex;
+    background-color: rgb(240, 240, 240);
+    padding: 50px;
+    margin-bottom: 30px;
+    img {
+        height: 300px;
+        width: auto;
+        object-fit: cover;
+    }
+}
+
+.projekt-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    button {
+        width: 100px;
+    }
+}
