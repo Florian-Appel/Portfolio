@@ -1,4 +1,4 @@
-<form method="post" action="php/send_mail/contact-form-process.php" class="contact" id="contact">
+<form action="sendMail.php" method="POST" class="contact" id="contact">
     <div class="contact-content">
         <div class="contact-header">
             <h1>Contact me.</h1>
@@ -6,12 +6,12 @@
         </div>
 
         <div class="contact-field">
-            <label for="Name">Name</label>
-            <input name="Name" required type="text">
-            <label for="Email">Email adress</label>
-            <input name="Email" required type="email">
-            <label for="Message">Message</label>
-            <textarea name="Message" required cols="20" rows="8"></textarea>
+            <label for="name">Name</label>
+            <input id="name" name="Name" required type="text">
+            <label for="email">Email adress</label>
+            <input id="email" name="Email" required type="email">
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" required cols="20" rows="8"></textarea>
         </div>
 
         <div class="send-button">
