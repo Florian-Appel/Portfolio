@@ -1,4 +1,4 @@
-<div class="contact" id="contact">
+<form method="post" action="php/send_mail/contact-form-process.php" class="contact" id="contact">
     <div class="contact-content">
         <div class="contact-header">
             <h1>Contact me.</h1>
@@ -6,18 +6,16 @@
         </div>
 
         <div class="contact-field">
-            <span>Name</span>
-            <input required type="text" placeholder="Enter your name">
-            <span>Email adress</span>
-            <input required type="email" placeholder="Enter your Email adress">
-            <span>Message</span>
-            <textarea required placeholder="Enter your message" cols="20" rows="7"></textarea>
+            <label for="Name">Name</label>
+            <input name="Name" required type="text">
+            <label for="Email">Email adress</label>
+            <input name="Email" required type="email">
+            <label for="Message">Message</label>
+            <textarea name="Message" required cols="20" rows="8"></textarea>
         </div>
 
-        <div>
-            <button class="send-button">
-                <span>Send</span> <!--Funtioniert nicht, warum?-->
-              </button>
+        <div class="send-button">
+            <button class="button-23 b-2" role="button">Send</button>
         </div>
     </div>
-</div>
+</form>

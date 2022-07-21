@@ -22,7 +22,8 @@
 }
 
 .custom-shape-divider-bottom-1649256662 .shape-fill {
-    fill: #f0f0f0;
+    // fill: #f0f0f0;
+    fill: white;
 }
 
 .home {
@@ -40,10 +41,12 @@
         font-size: 300%;
         margin-top: 15px;
         margin-bottom: 15px;
+        font-family: serif;
     }
     p {
         margin-top: 50px;
         font-size: 20px;
+        font-family: serif;
     }
 }
 
