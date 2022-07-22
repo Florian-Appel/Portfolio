@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 .contact-header {
@@ -14,6 +14,9 @@
     flex-direction: column;
     padding-bottom: 30px;
     align-items: center;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
     a {
         text-decoration: none;
         color: green;
@@ -94,4 +97,35 @@
 
 .send-button {
     margin-top: 20px;
+}
+
+// responsive
+@media (max-width: 550px) {
+    .contact-field {
+        width: 400px;
+    }
+}
+
+@media (max-width: 470px) {
+    .contact-field {
+        width: 350px;
+    }
+}
+
+@media (max-width: 420px) {
+    .contact-field {
+        width: 300px;
+    }
+}
+
+@media (max-width: 360px) {
+    .contact-field {
+        width: 250px;
+    }
+}
+
+@media (max-width: 300px) {
+    .contact-field {
+        width: 200px;
+    }
 }
