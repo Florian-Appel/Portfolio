@@ -1,21 +1,21 @@
-<form action="sendMail.php" method="POST" class="contact" id="contact">
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact" id="contact">
     <div class="contact-content">
         <div class="contact-header">
             <h1>Contact me.</h1>
-            <p>Get in touch via the form below, or by emailing <a href="#">florian.appel@proton.me</a></p>
+            <p>Get in touch via the form below, or by emailing <a href="mailto: florian.appel@proton.me">florian.appel@proton.me</a></p>
         </div>
 
         <div class="contact-field">
-            <label for="name">Name</label>
-            <input id="name" name="Name" required type="text">
-            <label for="email">Email adress</label>
-            <input id="email" name="Email" required type="email">
-            <label for="message">Message</label>
-            <textarea id="message" name="Message" required cols="20" rows="8"></textarea>
+            <label>Name</label>
+            <input id="name" [(ngModel)]="contact.name" name="name" #name="ngModel" required type="text">
+            <label>Email adress</label>
+            <input id="email" [(ngModel)]="contact.email" name="email" #email="ngModel" required type="email">
+            <label>Message</label>
+            <textarea id="message" [(ngModel)]="contact.message" name="message" #message="ngModel" required cols="20" rows="8"></textarea>
         </div>
 
         <div class="send-button">
-            <button class="button-23 b-2" role="button">Send</button>
+            <button type="submit" class="button-23 b-2" role="button">Send</button>
         </div>
     </div>
 </form>
