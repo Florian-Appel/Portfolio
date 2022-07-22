@@ -1,63 +1,82 @@
-    .header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 100vh;
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    h1 {
+        font-size: 300%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    p {
+        margin-top: 50px;
+        font-size: 20px;
+    }
+}
+
+.navbar {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    padding-top: 20px;
+    padding-right: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    a {
+        color: white;
+        margin-right: 50px;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    p {
+        margin-top: 0;
+        margin-left: 20px;
+    }
+    img {
+        width: 70px;
+        padding-left: 20px;
+    }
+    nav {
         display: flex;
         align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        color: white;
-        h1 {
-            font-size: 300%;
-            margin-top: 15px;
-            margin-bottom: 15px;
-        }
-        p {
-            margin-top: 50px;
-            font-size: 20px;
-        }
     }
-    
+}
+
+// Responsive
+@media (max-width: 650px) {
     .navbar {
-        position: absolute;
-        z-index: 2;
-        display: flex;
-        padding-top: 20px;
-        padding-right: 30px;
-        top: 0;
-        left: 0;
-        right: 0;
-        justify-content: space-between;
+        padding-right: 0;
         a {
-            color: white;
-            margin-right: 50px;
-            text-decoration: none;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-        p {
-            margin-top: 0;
-            margin-left: 20px;
+            font-size: 15px;
+            margin-right: 30px;
         }
         img {
-            width: 70px;
-            padding-left: 20px;
+            width: 50px;
         }
     }
-    
-    // Responsive
-    @media (max-width: 650px) {
-        .navbar {
-            padding-right: 0;
-            a {
-                font-size: 15px;
-                margin-right: 30px;
-            }
-            img {
-                width: 50px;
-            }
+}
+
+@media (max-width: 450px) {
+    .home-link {
+        display: none;
+    }
+}
+
+@media (max-width: 340px) {
+    .navbar {
+        justify-content: flex-end;
+        img {
+            display: none;
         }
     }
+}
