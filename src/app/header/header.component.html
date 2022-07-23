@@ -1,11 +1,12 @@
-<div class="header">
-    <div class="navbar">
-        <img src="assets/img/LogoMakr-0NM5H8.png" alt="">
-        <nav>
-            <a class="home-link" href="#home">Home</a>
-            <a href="#skills">Skills</a>
-            <a href="#portfolio">Projekts</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
+<!-- <div class="header"> -->
+<div class="navbar" [class.headerDark]="darkMode">
+    <img *ngIf="!darkMode" src="assets/img/LogoMakr-0NM5H8.png" alt="">
+    <img *ngIf="darkMode" src="assets/img/LogoMakr-0NM5H8-black.png" alt="">
+    <nav [class.darkLinks]="darkMode">
+        <a class="home-link" href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Projekts</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </div>
+<!-- </div> -->
