@@ -34,6 +34,8 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+    
+
   /**
    * Do not forget to import FormsModule and HttpCLientModule in app.module.ts
    */
