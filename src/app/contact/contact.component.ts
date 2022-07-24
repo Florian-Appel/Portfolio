@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -7,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+
 
   contact = {
     name: '', //Bind  to InputField name="name"
@@ -34,12 +36,12 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
-    
+
 
   /**
    * Do not forget to import FormsModule and HttpCLientModule in app.module.ts
    */
-   onSubmit(ngForm: { submitted: any; form: { valid: any; }; }) {
+  onSubmit(ngForm: { submitted: any; form: { valid: any; }; }) {
     if (ngForm.submitted && ngForm.form.valid) {
       this.http
         .post(this.post.endPoint, this.post.body(this.contact))
