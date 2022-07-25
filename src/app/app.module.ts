@@ -13,6 +13,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from  '@angular/common/http';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 
 
@@ -27,6 +28,7 @@ import { HttpClientModule } from  '@angular/common/http';
     FotterComponent,
     ImpressumComponent,
     PrivacyComponent,
+    AboutMeComponent,
   ],
   imports: [
     BrowserModule,
