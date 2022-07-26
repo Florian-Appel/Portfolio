@@ -21,12 +21,64 @@
         height: 250px;
         object-fit: cover;
         border-radius: 100%;
+        padding: 50px;
     }
 }
 
 .AboutMe-text {
     display: flex;
-    width: 50%;
     flex-direction: column;
     align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    p {
+        line-height: 20px;
+    }
+}
+
+// Responsive
+@media (max-width: 850px) {
+    // .aboutMe {
+    //     height: 400px;
+    // }
+    .AboutMe-text {
+        padding-left: 0px;
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 750px) {
+    .aboutMe {
+        height: 750px;
+        flex-direction: column;
+        img {
+            padding: 0;
+        }
+    }
+    .AboutMe-text {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutMe {
+        height: 800px;
+    }
+    .AboutMe-text {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .aboutMe {
+        height: 850px;
+    }
+}
+
+@media (max-width: 370px) {
+    .aboutMe {
+        height: 900px;
+    }
 }
