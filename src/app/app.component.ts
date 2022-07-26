@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'portfolio';
+  title = 'Florian Appel Portfolio';
 
   constructor(public router: Router) {}
 
