@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -9,11 +8,19 @@ import { NgForm } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
+  contact_validation = {
+    name: true,
+    email: true,
+    message: true,
+  }
+
+  messageSend = false;
+
 
   contact = {
-    name: '', //Bind  to InputField name="name"
-    email: '', //Bind to InputField name="email"
-    message: '', //Bind to InputField name="message"
+    name: '',
+    email: '',
+    message: '',
   };
 
   post = {
@@ -41,12 +48,18 @@ export class ContactComponent implements OnInit {
   /**
    * Do not forget to import FormsModule and HttpCLientModule in app.module.ts
    */
-  onSubmit(ngForm: { submitted: any; form: { valid: any; }; }) {
+  onSubmit(ngForm: {
+    resetForm: any; submitted: any; form: { valid: any; }; 
+}) {
+    this.updateValidation(ngForm);
     if (ngForm.submitted && ngForm.form.valid) {
       this.http
         .post(this.post.endPoint, this.post.body(this.contact))
         .subscribe({
           next: (response) => {
+            ngForm.resetForm()
+            this.messageSend = true;
+            this.timeOutSendMail();
             console.log(response);
             // Here Message was send
           },
@@ -56,6 +69,30 @@ export class ContactComponent implements OnInit {
           },
           complete: () => console.info('send post complete'),
         });
+    }
+  }
+
+  timeOutSendMail() {
+    setTimeout(() => {
+      this.messageSend = false;
+    }, 1000);
+  }
+
+  updateValidation(ngForm: { submitted?: any; form: any; }) {
+    if (ngForm.form.controls.name.status == "INVALID") {
+      this.contact_validation.name = false;
+    } else {
+      this.contact_validation.name = true;
+    }
+    if (ngForm.form.controls.email.status == "INVALID") {
+      this.contact_validation.email = false;
+    } else {
+      this.contact_validation.email = true;
+    }
+    if (ngForm.form.controls.message.status == "INVALID") {
+      this.contact_validation.message = false;
+    } else {
+      this.contact_validation.message = true;
     }
   }
 

@@ -6,12 +6,15 @@
         </div>
 
         <div class="contact-field">
-            <label>Name</label>
+            <label style="margin-top: 20px;">Name</label>
             <input id="name" [(ngModel)]="contact.name" name="name" #name="ngModel" required type="text">
-            <label>Email adress</label>
+            <label class="enterNote" *ngIf="!this.contact_validation.name" for="name">*Please enter a name</label>
+            <label style="margin-top: 20px;">Email adress</label>
             <input id="email" [(ngModel)]="contact.email" name="email" #email="ngModel" required type="email">
-            <label>Message</label>
+            <label class="enterNote" *ngIf="!this.contact_validation.email" for="email">*Please enter a email</label>
+            <label style="margin-top: 20px;">Message</label>
             <textarea id="message" [(ngModel)]="contact.message" name="message" #message="ngModel" required cols="20" rows="8"></textarea>
+            <label class="enterNote" *ngIf="!this.contact_validation.message" for="message">*Please enter a message</label>
         </div>
 
         <div class="send-button">

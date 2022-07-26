@@ -1,7 +1,7 @@
 <!-- <div class="header"> -->
 <div class="navbar" [class.headerDark]="darkMode">
-    <a href="#home"><img *ngIf="!darkMode" src="assets/img/LogoMakr-0NM5H8.png" alt=""></a>
-    <a href="#home"><img *ngIf="darkMode" src="assets/img/LogoMakr-0NM5H8-black.png" alt=""></a>
+    <a *ngIf="!darkMode" href="#home"><img src="assets/img/LogoMakr-0NM5H8.png" alt=""></a>
+    <a *ngIf="darkMode" href="#home"><img src="assets/img/LogoMakr-0NM5H8-black.png" alt=""></a>
     <nav [class.darkLinks]="darkMode">
         <a class="home-link" href="#home">Home</a>
         <a href="#skills">Skills</a>
