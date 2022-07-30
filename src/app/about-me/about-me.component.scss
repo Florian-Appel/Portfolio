@@ -11,11 +11,10 @@
 .aboutMe {
     display: flex;
     align-items: center;
-    height: 350px;
     width: 100%;
     background-color: rgb(240, 240, 240);
     justify-content: space-evenly;
-    margin-bottom: 30px;
+    margin-top: 50px;
     img {
         width: 250px;
         height: 250px;
@@ -38,9 +37,6 @@
 
 // Responsive
 @media (max-width: 850px) {
-    // .aboutMe {
-    //     height: 400px;
-    // }
     .AboutMe-text {
         padding-left: 0px;
         padding-right: 50px;
@@ -49,36 +45,27 @@
 
 @media (max-width: 750px) {
     .aboutMe {
-        height: 750px;
         flex-direction: column;
-        img {
-            padding: 0;
-        }
     }
     .AboutMe-text {
         padding-left: 80px;
         padding-right: 80px;
+        padding-bottom: 30px;
     }
 }
 
 @media (max-width: 480px) {
-    .aboutMe {
-        height: 800px;
-    }
     .AboutMe-text {
         padding-left: 50px;
         padding-right: 50px;
+        padding-bottom: 30px;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 350px) {
     .aboutMe {
-        height: 850px;
-    }
-}
-
-@media (max-width: 370px) {
-    .aboutMe {
-        height: 900px;
+        img {
+            padding: 40px;
+        }
     }
 }

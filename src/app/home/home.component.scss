@@ -22,11 +22,11 @@
 }
 
 .custom-shape-divider-bottom-1649256662 .shape-fill {
-    fill: white;
+    fill: rgb(240, 240, 240);
 }
 
 .home {
-    position: absolute;
+    // position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -36,16 +36,20 @@
     flex-direction: column;
     justify-content: center;
     color: white;
+    background-image: url('../../assets/img/Home-Backround-55.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
     h1 {
         font-size: 300%;
         margin-top: 15px;
         margin-bottom: 15px;
-        font-family: serif;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
     p {
         margin-top: 50px;
         font-size: 20px;
-        font-family: serif;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 }
 
@@ -65,7 +69,7 @@
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
     .header-text {
         h1 {
             font-size: 250%;
@@ -81,7 +85,7 @@
     }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 530px) {
     .header-text {
         h1 {
             font-size: 200%;
@@ -94,7 +98,7 @@
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 430px) {
     .header-text {
         h1 {
             font-size: 180%;
@@ -107,7 +111,7 @@
     }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 370px) {
     .header-text {
         h1 {
             font-size: 150%;

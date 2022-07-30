@@ -10,7 +10,7 @@
 
 .projekt-box {
     display: flex;
-    background-color: rgb(240, 240, 240);
+    box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.2);
     padding: 50px;
     margin-bottom: 30px;
     img {
@@ -27,10 +27,15 @@
     flex-direction: column;
     text-align: center;
     padding-left: 100px;
-    padding-right: 100px;
+    padding-right: 50px;
     button {
         width: 100px;
     }
+}
+
+.projekt-info-padding {
+    padding-left: 50px;
+    padding-right: 100px;
 }
 
 .project-buttons {
@@ -87,7 +92,7 @@
 
 .button-23 {
     background-color: #126bfb;
-    border: 1px solid #222222;
+    border: 1px solid #126bfb;
     border-radius: 8px;
     box-sizing: border-box;
     color: white;
@@ -211,6 +216,21 @@
     .c-reverse {
         flex-direction: column-reverse;
     }
+    .projects-header {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 380px) {
+    .projekt-info {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .projects-header {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -218,5 +238,13 @@
         img {
             height: 150px;
         }
+    }
+    .projekt-info {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .projects-header {
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 }
